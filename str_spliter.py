@@ -1,5 +1,4 @@
 import operator
-import random
 
 
 string = raw_input("Give your math type\n>")
