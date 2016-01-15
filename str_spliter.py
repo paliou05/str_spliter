@@ -20,6 +20,8 @@ def find_operation(string, ops):
                 index +=1
         operation = string[op_indx]
         return op, operation
+
+
 #check for parenthesys and split the string so we extract the numbers out of it
 def check_string(string, operation, ops):
         if string.startswith('(') == True and string.endswith(')') == True:
@@ -38,6 +40,8 @@ def check_string(string, operation, ops):
                         print answer
         else:
                 print ("\nForgot to close parenthesys\n")
+                
+                
 if __name__ == '__main__':
         string = raw_input("Give your math type\n>")
         ops = {'+':operator.add,
