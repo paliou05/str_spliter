@@ -29,14 +29,14 @@ def check_string(string, operation, ops):
                 num1 = split_str[0].split('(')
                 num2 = split_str[1].split(')')
                 try:
-                        a = int(num1[1])
-                        b = int(num2[0])
+                        first_num = int(num1[1])
+                        second_num = int(num2[0])
                 except ValueError:
                         print "\nThat's not a number, please enter only numbers\n"
-                if b == 0 and op == ops['/']:
+                if second_num == 0 and op == list(ops.keys())[3]:
                         raise Exception("\nDivision by 0 can't happen\n")
                 else:
-                        answer = int(ops.get(op)(a,b))
+                        answer = int(ops.get(op)(first_num,second_num))
                         print answer
         else:
                 print ("\nForgot to close parenthesys\n")
